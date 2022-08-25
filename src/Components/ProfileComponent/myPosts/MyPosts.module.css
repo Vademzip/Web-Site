@@ -1,0 +1,17 @@
+.posts {
+    padding: 10px;
+    color : white;
+}
+
+textarea{
+    border: 1px dotted orangered;
+    border-radius: 25px;
+    resize: none;
+    width: 200px;
+}
+
+button{
+    border-radius: 25px;
+    width: 100px;
+    height: 50px;
+}

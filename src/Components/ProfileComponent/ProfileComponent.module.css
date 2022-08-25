@@ -1,0 +1,13 @@
+
+.mainContent .header img{
+    width: 100%;
+    /* max-width: 508px; */
+    object-fit: cover;
+    height: 100px;
+}
+
+
+.item {
+    color : aliceblue;
+}
+

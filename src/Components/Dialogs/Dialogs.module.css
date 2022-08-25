@@ -1,0 +1,35 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.dialogsItems{
+    color:white;
+    padding: 10px;
+}
+
+.active img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+}
+
+.dialogsItems .item{
+    padding: 10px;
+}
+
+    .active{
+    color: gold;
+}
+
+.messages{
+    color : white;
+}
+
+.message{
+
+}
+
+.inputWindow{
+    width: 100px;
+}

@@ -1,0 +1,19 @@
+.Container {
+    display: grid;
+    grid-template-areas:
+    "h h"
+    "n c";
+    margin: 0 auto;
+    grid-template-rows: 100px 1fr;
+    grid-auto-columns: 1fr 10fr;
+    grid-gap: 3px;
+
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: cornflowerblue;
+
+}
+
+
