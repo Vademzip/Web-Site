@@ -16,19 +16,22 @@ let initState = {
         {id: 2, message: 'Hello'},
         {id: 3, message: 'Go drink beer'}
     ],
-    newMessageText : 'texthere'
+    newMessageText : 'te1xtere'
 }
 
 const messagesReducer = (state = initState, action) => {
-
     switch (action.type) {
-        case UPDATE_MESSAGE_TEXT_AREA:
-            state.newMessageText = action.newMessageText;
-            break;
-        case SEND_MESSAGE:
-            state.messagesData.push({id: 4, message: state.newMessageText})
-            state.newMessageText = "";
-            break;
+        case UPDATE_MESSAGE_TEXT_AREA: {
+            let stateCopy = {...state}
+            stateCopy.newMessageText = action.newMessageText;
+            return  stateCopy;
+        }
+        case SEND_MESSAGE: {
+            let stateCopy = {...state}
+            stateCopy.messagesData.push({id: 4, message: state.newMessageText})
+            stateCopy.newMessageText = "";
+            return stateCopy
+        }
     }
 
     return state;

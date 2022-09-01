@@ -10,11 +10,11 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        onChangeTextArea : () => {dispatch(SendMessageCreator())},
-        onCLickSendMessage : (NewText_in_TextArea) => {dispatch(UpdateMessageTextCreator(NewText_in_TextArea))
+        onChangeTextArea : (NewText_in_TextArea) => {dispatch(UpdateMessageTextCreator(NewText_in_TextArea))},
+        onCLickSendMessage : () => {dispatch(SendMessageCreator())}
         }
     }
-}
+
 const dialogsContainer = connect(mapStateToProps,mapDispatchToProps)(Dialogs);
 
 export default dialogsContainer;
