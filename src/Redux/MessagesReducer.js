@@ -16,7 +16,7 @@ let initState = {
         {id: 2, message: 'Hello'},
         {id: 3, message: 'Go drink beer'}
     ],
-    newMessageText : 'te1xtere'
+    newMessageText : 'te111xtere'
 }
 
 const messagesReducer = (state = initState, action) => {
