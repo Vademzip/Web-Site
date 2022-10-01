@@ -1,18 +1,25 @@
-import styles from "../Users/Users.module.css"
-import * as axios from "axios";
-import defaultUserPhoto from "../../assets/noPhoto.jpeg"
+import styles from "./Users.module.css";
+import defaultUserPhoto from "../../assets/noPhoto.jpeg";
+import React from 'react'
+
 
 let Users = (props) => {
-     let getUsers = () => {
-         if (props.users.length === 0) {
-             axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-                 props.setUsers(response.data.items)
-             })
-         }
-     }
-
+    let pagesCount = Math.ceil(props.totaluserscount / props.pagesize);
+    let pages = [];
+    for (let i = 1; i <= pagesCount; i++){
+        pages.push(i);
+    }
+    let curP = props.currentpage;
+    let curPF = ((curP - 5) < 0) ?  0  : curP - 5 ;
+    let curPL = curP + 5;
+    let slicedPages = pages.slice( curPF, curPL);
     return <div>
-        <button onClick={getUsers}>Загрузить список пользователей</button>
+        <div>
+            {slicedPages.map(p => {
+                return <span className={props.currentpage === p && styles.selectedPage} onClick={ (event) => {props.onpagechanged(p)}}>{p}</span>
+            })}
+
+        </div>
         {
             props.users.map(u => <div key={u.id}>
                 <span>
