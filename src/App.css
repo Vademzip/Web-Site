@@ -13,7 +13,10 @@
 .app-wrapper-content {
     grid-area: c;
     background-color: cornflowerblue;
-
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -11,3 +11,14 @@
     color : aliceblue;
 }
 
+.loading{
+        display: flex;
+        background-color: rgba(0,0,0,0.9);
+        flex-grow: 1;
+        align-items: center;
+    justify-content: center;
+}
+
+.preloader{
+
+}

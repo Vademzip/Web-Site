@@ -18,7 +18,6 @@ const myPosts = (props) => {
     };
 
     let updateText = () => {
-        debugger;
         let text = newPostElement.current.value;
         props.updateTextPost(text); // без Диспатча так
     };

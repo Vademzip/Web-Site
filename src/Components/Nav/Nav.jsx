@@ -6,7 +6,7 @@ import Nav from "./Nav";
 const navBar = () => {
     return (<nav className={styles.nav}>
             <div className={styles.item}>
-                <NavLink to="/ProfileComponent" className={ navData => navData.isActive?styles.activeLink : styles.item}>Profile</NavLink>
+                <NavLink to="/profile" className={ navData => navData.isActive?styles.activeLink : styles.item}>Profile</NavLink>
             </div>
             <div className={styles.item}>
                 <NavLink to="/dialogs" className={ navData => navData.isActive?styles.activeLink : styles.item}>Messages</NavLink>
